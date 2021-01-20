@@ -1,3 +1,3 @@
 const path = {
-    toiCompetition: '404-toi-competition-opitions',
+  toiCompetition: "404-toi-competition-opitions",
 };

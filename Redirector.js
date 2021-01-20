@@ -3,37 +3,37 @@
  */
 
 class Redirector {
-    constructor(hostTable, pathTable) {
-        // HostTable
-        this.ht = hostTable;
-        // PathTable
-        this.pt = pathTable;
-    }
+  constructor(hostTable, pathTable) {
+    // HostTable
+    this.ht = hostTable;
+    // PathTable
+    this.pt = pathTable;
+  }
 
-    hasHost(hostId) {
-        return (hostId in this.ht);
-    }
+  hasHost(hostId) {
+    return hostId in this.ht;
+  }
 
-    setHost(hostId) {
-        this.url = new URL(this.ht[hostId]);
-        return this;
-    }
+  setHost(hostId) {
+    this.url = new URL(this.ht[hostId]);
+    return this;
+  }
 
-    hasPath(pathId) {
-        return (pathId in this.pt);
-    }
+  hasPath(pathId) {
+    return pathId in this.pt;
+  }
 
-    setPath(pathId) {
-        this.url.pathname = this.pt[pathId];
-        return this;
-    }
-    
-    build() {
-        return this.url.toString();
-    }
+  setPath(pathId) {
+    this.url.pathname = this.pt[pathId];
+    return this;
+  }
 
-    redirect() {
-        location.href = this.build();
-        return;
-    }
+  build() {
+    return this.url.toString();
+  }
+
+  redirect() {
+    location.href = this.build();
+    return;
+  }
 }

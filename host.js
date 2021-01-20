@@ -1,3 +1,3 @@
 const hosts = {
-    panBlog: 'https://blog.pan93.tk',
+  panBlog: "https://blog.pan93.tk",
 };
