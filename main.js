@@ -19,5 +19,5 @@ function main() {
 
   redirect.setHost(_host).setPath(_path);
   manualRedirect.href = redirect.build();
-  //redirect.redirect();
+  redirect.redirect();
 }
